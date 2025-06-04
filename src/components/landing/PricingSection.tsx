@@ -24,6 +24,7 @@ const pricingTiers = [
       'Podcast-style learning',
       '10-12 minute summaries',
       'Visual mind maps',
+      '50 AI-generated quizzes',
       'Email support',
     ],
     cta: 'Get Student Plan',
@@ -31,18 +32,17 @@ const pricingTiers = [
     popular: true,
   },
   {
-    name: 'Premium',
+    name: 'Enterprise',
     price: '$19.99',
     period: '/month',
-    description: 'For power users and educators.',
+    description: 'For power users, educators, and organizations.',
     features: [
-      'All Student features',
-      'Practice exams',
-      'Offline access',
+      'Everything in Student, plus:',
+      'Unlimited AI-generated quizzes',
       'Priority support',
       'Early access to new features',
     ],
-    cta: 'Go Premium',
+    cta: 'Contact Sales',
     variant: 'outline' as 'outline' | 'default',
   },
 ];
@@ -83,8 +83,8 @@ const PricingSection = () => {
               <CardContent className="flex-grow">
                 <ul className="space-y-3">
                   {tier.features.map((feature, index) => (
-                    <li key={index} className="flex items-center gap-2">
-                      <CheckCircle2 className="h-5 w-5 text-green-500 flex-shrink-0" />
+                    <li key={index} className="flex items-start gap-2">
+                      <CheckCircle2 className="h-5 w-5 text-green-500 flex-shrink-0 mt-1" />
                       <span className="text-muted-foreground">{feature}</span>
                     </li>
                   ))}
@@ -97,7 +97,7 @@ const PricingSection = () => {
                   variant={tier.popular ? 'default' : tier.variant} 
                   asChild
                 >
-                  <Link href="/signup">{tier.cta}</Link>
+                  <Link href={tier.name === 'Enterprise' ? '/contact' : '/signup'}>{tier.cta}</Link>
                 </Button>
               </CardFooter>
             </Card>
