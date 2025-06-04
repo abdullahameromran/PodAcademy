@@ -63,7 +63,7 @@ const PricingSection = () => {
           {pricingTiers.map((tier) => (
             <Card
               key={tier.name}
-              className={`flex flex-col shadow-lg hover:shadow-xl transition-all duration-300 active:scale-95 ${
+              className={`flex flex-col shadow-lg hover:shadow-xl active:shadow-xl active:scale-95 active:-translate-y-0.5 transition-all duration-300 ${
                 tier.popular ? 'border-2 border-theme-purple relative' : ''
               }`}
             >
