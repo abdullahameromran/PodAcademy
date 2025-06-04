@@ -26,10 +26,10 @@ const HeroSection = () => {
         <div className="relative aspect-video rounded-lg overflow-hidden shadow-2xl">
           <Image
             src="https://placehold.co/600x400.png"
-            alt="Human using PodAcademy"
+            alt="PodAcademy app interface showing students learning with audio"
             layout="fill"
             objectFit="cover"
-            data-ai-hint="human"
+            data-ai-hint="students podcasting"
             priority
           />
         </div>
