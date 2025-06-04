@@ -16,6 +16,12 @@ const nextConfig: NextConfig = {
         port: '',
         pathname: '/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'be13a6bfb72b1843b287a4c59c4f4174.cdn.bubble.io',
+        port: '',
+        pathname: '/**',
+      }
     ],
   },
 };
