@@ -29,12 +29,12 @@ const testimonials = [
   },
 ];
 
-const universityLogos = [
-  { name: 'University A', src: 'https://placehold.co/150x50.png?text=Uni+A', hint: 'university logo' },
-  { name: 'University B', src: 'https://placehold.co/150x50.png?text=Uni+B', hint: 'university logo' },
-  { name: 'University C', src: 'https://placehold.co/150x50.png?text=Uni+C', hint: 'university logo' },
-  { name: 'University D', src: 'https://placehold.co/150x50.png?text=Uni+D', hint: 'university logo' },
-];
+// const universityLogos = [
+//   { name: 'University A', src: 'https://placehold.co/150x50.png?text=Uni+A', hint: 'university logo' },
+//   { name: 'University B', src: 'https://placehold.co/150x50.png?text=Uni+B', hint: 'university logo' },
+//   { name: 'University C', src: 'https://placehold.co/150x50.png?text=Uni+C', hint: 'university logo' },
+//   { name: 'University D', src: 'https://placehold.co/150x50.png?text=Uni+D', hint: 'university logo' },
+// ];
 
 const SocialProofSection = () => {
   return (
@@ -79,7 +79,7 @@ const SocialProofSection = () => {
           ))}
         </div>
 
-        <div className="text-center">
+        {/* <div className="text-center">
           <h3 className="text-2xl font-semibold mb-6">Trusted by Leading Institutions</h3>
           <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12">
             {universityLogos.map((logo, index) => (
@@ -95,7 +95,7 @@ const SocialProofSection = () => {
               </div>
             ))}
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );

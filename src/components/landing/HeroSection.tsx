@@ -26,10 +26,10 @@ const HeroSection = () => {
         <div className="relative aspect-video rounded-lg overflow-hidden shadow-2xl">
           <Image
             src="https://placehold.co/600x400.png"
-            alt="Student with headphones, books transforming into audio waves"
+            alt="Human using PodAcademy"
             layout="fill"
             objectFit="cover"
-            data-ai-hint="student headphones audio waves"
+            data-ai-hint="human"
             priority
           />
         </div>
