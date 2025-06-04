@@ -11,6 +11,7 @@ const Navbar = () => {
     { href: '#pricing', label: 'Pricing' },
     { href: '#faq', label: 'FAQ' },
   ];
+  const appUrl = 'http://app.podacademy101.online/';
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
@@ -40,10 +41,10 @@ const Navbar = () => {
 
         <div className="hidden md:flex items-center gap-3">
           <Button variant="outline" size="sm" asChild>
-            <Link href="/login">Log In</Link>
+            <Link href={appUrl} target="_blank" rel="noopener noreferrer">Log In</Link>
           </Button>
           <Button size="sm" className="bg-gradient-to-r from-theme-purple to-theme-cyan text-primary-foreground hover:opacity-90 transition-opacity" asChild>
-            <Link href="/signup">Start Free Trial</Link>
+            <Link href={appUrl} target="_blank" rel="noopener noreferrer">Start Free Trial</Link>
           </Button>
         </div>
 
@@ -68,10 +69,10 @@ const Navbar = () => {
                 ))}
                 <div className="flex flex-col gap-4 mt-4">
                    <Button variant="outline" asChild>
-                      <Link href="/login">Log In</Link>
+                      <Link href={appUrl} target="_blank" rel="noopener noreferrer">Log In</Link>
                     </Button>
                     <Button className="bg-gradient-to-r from-theme-purple to-theme-cyan text-primary-foreground hover:opacity-90 transition-opacity" asChild>
-                      <Link href="/signup">Start Free Trial</Link>
+                      <Link href={appUrl} target="_blank" rel="noopener noreferrer">Start Free Trial</Link>
                     </Button>
                 </div>
               </nav>

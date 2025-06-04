@@ -32,22 +32,25 @@ const pricingTiers = [
     popular: true,
   },
   {
-    name: 'Enterprise',
+    name: 'Enterprise', // Renamed from Premium
     price: '$19.99',
     period: '/month',
     description: 'For power users, educators, and organizations.',
     features: [
       'Everything in Student, plus:',
-      'Unlimited AI-generated quizzes',
+      'Unlimited AI-generated quizzes', // Unlimited based on "all is unlimited"
       'Priority support',
       'Early access to new features',
+      // "Offline access" removed
     ],
-    cta: 'Contact Sales',
+    cta: 'Contact Sales', // CTA changed
     variant: 'outline' as 'outline' | 'default',
   },
 ];
 
 const PricingSection = () => {
+  const appUrl = 'http://app.podacademy101.online/';
+
   return (
     <section id="pricing" className="py-16 md:py-24">
       <div className="container">
@@ -97,7 +100,7 @@ const PricingSection = () => {
                   variant={tier.popular ? 'default' : tier.variant} 
                   asChild
                 >
-                  <Link href={tier.name === 'Enterprise' ? '/contact' : '/signup'}>{tier.cta}</Link>
+                  <Link href={tier.name === 'Enterprise' ? '/contact' : appUrl} target={tier.name === 'Enterprise' ? '_self' : '_blank'} rel="noopener noreferrer">{tier.cta}</Link>
                 </Button>
               </CardFooter>
             </Card>

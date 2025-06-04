@@ -1,10 +1,13 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
-import { Github, Twitter, Linkedin } from 'lucide-react';
+import { Linkedin, Smartphone } from 'lucide-react';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
+  const whatsAppNumber = "201554670453";
+  const whatsAppLink = `https://wa.me/${whatsAppNumber}`;
+  const linkedInLink = "https://www.linkedin.com/company/podacademy101/?viewAsMember=true";
 
   return (
     <footer className="border-t border-border/40 py-12 bg-background">
@@ -38,7 +41,12 @@ const Footer = () => {
             <h4 className="font-semibold mb-3 text-foreground">Company</h4>
             <ul className="space-y-2">
               <li><Link href="/about" className="text-sm text-muted-foreground hover:text-primary">About Us</Link></li>
-              <li><Link href="/contact" className="text-sm text-muted-foreground hover:text-primary">Contact</Link></li>
+              <li><Link href="/contact" className="text-sm text-muted-foreground hover:text-primary">Contact Page</Link></li>
+              <li>
+                <Link href={whatsAppLink} target="_blank" rel="noopener noreferrer" className="text-sm text-muted-foreground hover:text-primary flex items-center gap-1">
+                  <Smartphone className="h-4 w-4" /> WhatsApp
+                </Link>
+              </li>
               <li><Link href="/careers" className="text-sm text-muted-foreground hover:text-primary">Careers</Link></li>
             </ul>
           </div>
@@ -56,17 +64,7 @@ const Footer = () => {
           </p>
           <div className="flex space-x-4">
             <Button variant="ghost" size="icon" asChild>
-              <Link href="#" aria-label="Twitter">
-                <Twitter className="h-5 w-5 text-muted-foreground hover:text-primary" />
-              </Link>
-            </Button>
-            <Button variant="ghost" size="icon" asChild>
-              <Link href="#" aria-label="GitHub">
-                <Github className="h-5 w-5 text-muted-foreground hover:text-primary" />
-              </Link>
-            </Button>
-            <Button variant="ghost" size="icon" asChild>
-              <Link href="#" aria-label="LinkedIn">
+              <Link href={linkedInLink} aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
                 <Linkedin className="h-5 w-5 text-muted-foreground hover:text-primary" />
               </Link>
             </Button>

@@ -3,6 +3,7 @@ import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 
 const HeroSection = () => {
+  const appUrl = 'http://app.podacademy101.online/';
   return (
     <section className="py-20 md:py-32 bg-secondary">
       <div className="container grid md:grid-cols-2 gap-12 items-center">
@@ -15,10 +16,10 @@ const HeroSection = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start pt-4">
             <Button size="lg" className="bg-gradient-to-r from-theme-purple to-theme-cyan text-primary-foreground hover:opacity-90 transition-opacity shadow-lg px-8 py-6 text-lg" asChild>
-              <Link href="/signup">Start Your Free Trial</Link>
+              <Link href={appUrl} target="_blank" rel="noopener noreferrer">Start Your Free Trial</Link>
             </Button>
             <Button variant="outline" size="lg" className="px-8 py-6 text-lg border-primary text-primary hover:bg-primary/5" asChild>
-              <Link href="#demo">Watch Demo</Link>
+              <Link href="#how-it-works">Watch Demo</Link>
             </Button>
           </div>
         </div>
