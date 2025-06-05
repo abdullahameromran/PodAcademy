@@ -23,24 +23,39 @@ const HeroSection = () => {
           </div>
         </div>
         <div className="relative aspect-video rounded-lg overflow-hidden shadow-2xl flex items-center justify-center p-4 bg-muted/20">
-          <svg 
-            className="w-1/2 h-1/2" 
-            viewBox="0 0 100 100" 
-            xmlns="http://www.w3.org/2000/svg" 
-            aria-label="Animated graphic of sound bars"
-            data-ai-hint="animated sound bars"
+          <svg
+            className="w-3/5 h-3/5"
+            viewBox="0 0 100 100"
+            xmlns="http://www.w3.org/2000/svg"
+            aria-label="Animated graphic of sound wave equalizer"
+            data-ai-hint="sound wave equalizer audio"
           >
-            <rect x="20" y="70" width="10" height="30" fill="hsl(var(--primary))">
-              <animate attributeName="height" values="30;50;20;40;30" dur="1.5s" repeatCount="indefinite" begin="0s" />
-              <animate attributeName="y" values="70;50;80;60;70" dur="1.5s" repeatCount="indefinite" begin="0s" />
+            {/* Baseline for bottom of bars is y=95 */}
+            {/* Bar 1 */}
+            <rect x="15" width="10" rx="2.5" ry="2.5" fill="hsl(var(--primary))">
+              {/* Initial: height=5, y=90 */}
+              <animate attributeName="height" values="5;60;20;70;30;50;5" dur="1.9s" repeatCount="indefinite" begin="0s" />
+              <animate attributeName="y"      values="90;35;75;25;65;45;90" dur="1.9s" repeatCount="indefinite" begin="0s" /> {/* y = 95 - height */}
             </rect>
-            <rect x="45" y="70" width="10" height="30" fill="hsl(var(--accent))">
-              <animate attributeName="height" values="30;60;25;50;30" dur="1.5s" repeatCount="indefinite" begin="0.3s" />
-              <animate attributeName="y" values="70;40;75;50;70" dur="1.5s" repeatCount="indefinite" begin="0.3s" />
+            {/* Bar 2 */}
+            <rect x="30" width="10" rx="2.5" ry="2.5" fill="hsl(var(--accent))">
+              <animate attributeName="height" values="5;70;25;60;35;40;5" dur="1.9s" repeatCount="indefinite" begin="0.15s" />
+              <animate attributeName="y"      values="90;25;70;35;60;55;90" dur="1.9s" repeatCount="indefinite" begin="0.15s" />
             </rect>
-            <rect x="70" y="70" width="10" height="30" fill="hsl(var(--primary))">
-              <animate attributeName="height" values="30;40;20;55;30" dur="1.5s" repeatCount="indefinite" begin="0.6s" />
-              <animate attributeName="y" values="70;60;80;45;70" dur="1.5s" repeatCount="indefinite" begin="0.6s" />
+            {/* Bar 3 */}
+            <rect x="45" width="10" rx="2.5" ry="2.5" fill="hsl(var(--primary))">
+              <animate attributeName="height" values="5;50;40;75;20;65;5" dur="1.9s" repeatCount="indefinite" begin="0.3s" />
+              <animate attributeName="y"      values="90;45;55;20;75;30;90" dur="1.9s" repeatCount="indefinite" begin="0.3s" />
+            </rect>
+            {/* Bar 4 */}
+            <rect x="60" width="10" rx="2.5" ry="2.5" fill="hsl(var(--accent))">
+              <animate attributeName="height" values="5;65;20;70;30;45;5" dur="1.9s" repeatCount="indefinite" begin="0.45s" />
+              <animate attributeName="y"      values="90;30;75;25;65;50;90" dur="1.9s" repeatCount="indefinite" begin="0.45s" />
+            </rect>
+            {/* Bar 5 */}
+            <rect x="75" width="10" rx="2.5" ry="2.5" fill="hsl(var(--primary))">
+              <animate attributeName="height" values="5;55;30;60;25;70;5" dur="1.9s" repeatCount="indefinite" begin="0.6s" />
+              <animate attributeName="y"      values="90;40;65;35;70;25;90" dur="1.9s" repeatCount="indefinite" begin="0.6s" />
             </rect>
           </svg>
         </div>
