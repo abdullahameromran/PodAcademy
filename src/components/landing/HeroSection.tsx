@@ -26,7 +26,7 @@ const HeroSection = () => {
         <div className="relative rounded-lg overflow-hidden shadow-2xl flex items-center justify-center p-4 bg-muted/20">
           <Image
             src="https://be13a6bfb72b1843b287a4c59c4f4174.cdn.bubble.io/f1749118093196x719140327044314200/ChatGPT%20Image%20Jun%205%2C%202025%2C%2001_03_14%20PM.png?_gl=1*1vju3g5*_gcl_au*MTI2MjE4NjI2Ni4xNzQ4ODg5ODkw*_ga*NzcyMjA1NzA1LjE3NDEwODcxMDg.*_ga_BFPVR2DEE2*czE3NDkxMTgwNjkkbzg3JGcxJHQxNzQ5MTE4MDgwJGo0OSRsMCRoMA.."
-            alt="Students using PodAcademy for podcast-style learning"
+            alt="Students engaging with PodAcademy's AI-powered audio learning platform."
             width={900}
             height={600}
             className="rounded-lg object-cover"
