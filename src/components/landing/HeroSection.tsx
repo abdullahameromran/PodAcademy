@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 
@@ -23,15 +22,27 @@ const HeroSection = () => {
             </Button>
           </div>
         </div>
-        <div className="relative aspect-video rounded-lg overflow-hidden shadow-2xl">
-          <Image
-            src="https://be13a6bfb72b1843b287a4c59c4f4174.cdn.bubble.io/f1749081621733x240038739918684280/ChatGPT%20Image%20Jun%205%2C%202025%2C%2002_57_10%20AM.png?_gl=1*4oj67s*_gcl_au*MTI2MjE4NjI2Ni4xNzQ4ODg5ODkw*_ga*NzcyMjA1NzA1LjE3NDEwODcxMDg.*_ga_BFPVR2DEE2*czE3NDkwNjIzMDMkbzg2JGcxJHQxNzQ5MDgxNjA4JGo1OSRsMCRoMA.."
-            alt="PodAcademy app interface showing students learning with audio"
-            layout="fill"
-            objectFit="cover"
-            priority
-            data-ai-hint="students podcasting"
-          />
+        <div className="relative aspect-video rounded-lg overflow-hidden shadow-2xl flex items-center justify-center p-4 bg-muted/20">
+          <svg 
+            className="w-1/2 h-1/2" 
+            viewBox="0 0 100 100" 
+            xmlns="http://www.w3.org/2000/svg" 
+            aria-label="Animated graphic of sound bars"
+            data-ai-hint="animated sound bars"
+          >
+            <rect x="20" y="70" width="10" height="30" fill="hsl(var(--primary))">
+              <animate attributeName="height" values="30;50;20;40;30" dur="1.5s" repeatCount="indefinite" begin="0s" />
+              <animate attributeName="y" values="70;50;80;60;70" dur="1.5s" repeatCount="indefinite" begin="0s" />
+            </rect>
+            <rect x="45" y="70" width="10" height="30" fill="hsl(var(--accent))">
+              <animate attributeName="height" values="30;60;25;50;30" dur="1.5s" repeatCount="indefinite" begin="0.3s" />
+              <animate attributeName="y" values="70;40;75;50;70" dur="1.5s" repeatCount="indefinite" begin="0.3s" />
+            </rect>
+            <rect x="70" y="70" width="10" height="30" fill="hsl(var(--primary))">
+              <animate attributeName="height" values="30;40;20;55;30" dur="1.5s" repeatCount="indefinite" begin="0.6s" />
+              <animate attributeName="y" values="70;60;80;45;70" dur="1.5s" repeatCount="indefinite" begin="0.6s" />
+            </rect>
+          </svg>
         </div>
       </div>
     </section>
