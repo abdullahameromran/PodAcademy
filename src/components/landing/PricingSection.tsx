@@ -19,7 +19,7 @@ const pricingTiers = [
     period: '/month',
     description: 'Perfect for individual students.',
     features: [
-      'Unlimited chapters',
+      '20 chapters/month', // Updated from 'Unlimited chapters'
       'Advanced AI conversion',
       'Podcast-style learning',
       '10-12 minute summaries',
