@@ -41,7 +41,7 @@ const Footer = () => {
             <h4 className="font-semibold mb-3 text-foreground">Company</h4>
             <ul className="space-y-2">
               <li><Link href="/about" className="text-sm text-muted-foreground hover:text-primary">About Us</Link></li>
-              <li><Link href="/contact" className="text-sm text-muted-foreground hover:text-primary">Contact Page</Link></li>
+              <li><Link href={whatsAppLink} target="_blank" rel="noopener noreferrer" className="text-sm text-muted-foreground hover:text-primary">Contact Us</Link></li>
               <li>
                 <Link href={whatsAppLink} target="_blank" rel="noopener noreferrer" className="text-sm text-muted-foreground hover:text-primary flex items-center gap-1">
                   <Smartphone className="h-4 w-4" /> WhatsApp
