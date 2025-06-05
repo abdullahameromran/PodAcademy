@@ -33,17 +33,16 @@ const pricingTiers = [
   },
   {
     name: 'Enterprise', // Renamed from Premium
-    price: '$19.99',
-    period: '/month',
+    price: '$19.99', // Price will not be displayed
+    period: '/month', // Period will not be displayed
     description: 'For power users, educators, and organizations.',
     features: [
       'Everything in Student, plus:',
-      'Unlimited AI-generated quizzes', // Unlimited based on "all is unlimited"
+      'Unlimited AI-generated quizzes', 
       'Priority support',
       'Early access to new features',
-      // "Offline access" removed
     ],
-    cta: 'Contact Sales', // CTA changed
+    cta: 'Contact Sales', 
     variant: 'outline' as 'outline' | 'default',
   },
 ];
@@ -77,10 +76,12 @@ const PricingSection = () => {
               )}
               <CardHeader className="pb-4">
                 <CardTitle className="text-2xl font-semibold">{tier.name}</CardTitle>
-                <div className="flex items-baseline">
-                  <span className="text-4xl font-bold">{tier.price}</span>
-                  <span className="text-muted-foreground ml-1">{tier.period}</span>
-                </div>
+                {tier.name !== 'Enterprise' && (
+                  <div className="flex items-baseline">
+                    <span className="text-4xl font-bold">{tier.price}</span>
+                    <span className="text-muted-foreground ml-1">{tier.period}</span>
+                  </div>
+                )}
                 <CardDescription>{tier.description}</CardDescription>
               </CardHeader>
               <CardContent className="flex-grow">
