@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Script from 'next/script';
 import './globals.css';
 import { Toaster } from "@/components/ui/toaster";
 
@@ -25,8 +26,8 @@ export const metadata: Metadata = {
     images: [
       {
         url: heroImageUrl,
-        width: 1200, // Actual width of the hero image
-        height: 800, // Actual height of the hero image
+        width: 1200,
+        height: 800,
         alt: 'Students using PodAcademy for AI-powered audio learning',
       },
     ],
@@ -38,15 +39,11 @@ export const metadata: Metadata = {
     title: newTitle,
     description: socialDescription,
     images: [heroImageUrl],
-    // If you have a Twitter handle, you can add it here:
-    // creator: '@YourTwitterHandle', 
   },
-  // You can also add keywords if you wish, though their importance has diminished:
-  // keywords: ['AI learning', 'podcast study', 'textbook conversion', 'audio lessons', 'student tools'],
   alternates: {
     canonical: siteUrl,
   },
-  robots: { // Basic robots directives
+  robots: {
     index: true,
     follow: true,
     googleBot: {
@@ -75,6 +72,8 @@ export default function RootLayout({
       <body className="font-body antialiased" suppressHydrationWarning={true}>
         {children}
         <Toaster />
+        <elevenlabs-convai agent-id="agent_01jwzvq08aee5rdwrhabt4j379"></elevenlabs-convai>
+        <Script src="https://unpkg.com/@elevenlabs/convai-widget-embed" strategy="afterInteractive" />
       </body>
     </html>
   );
