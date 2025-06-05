@@ -5,6 +5,10 @@ import { Toaster } from "@/components/ui/toaster";
 export const metadata: Metadata = {
   title: 'PodAcademy - Transform Textbooks into Engaging Audio',
   description: 'AI-powered study system that converts any syllabus into podcast-style conversations.',
+  icons: {
+    icon: 'https://be13a6bfb72b1843b287a4c59c4f4174.cdn.bubble.io/f1748103745897x593348561538088200/Untitled_logo_1_free-file%20%281%29.jpg',
+    apple: 'https://be13a6bfb72b1843b287a4c59c4f4174.cdn.bubble.io/f1748103745897x593348561538088200/Untitled_logo_1_free-file%20%281%29.jpg',
+  },
 };
 
 export default function RootLayout({
