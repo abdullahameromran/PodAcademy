@@ -28,7 +28,7 @@ const HeroSection = () => {
             src="https://be13a6bfb72b1843b287a4c59c4f4174.cdn.bubble.io/f1749081621733x240038739918684280/ChatGPT%20Image%20Jun%205%2C%202025%2C%2002_57_10%20AM.png?_gl=1*4oj67s*_gcl_au*MTI2MjE4NjI2Ni4xNzQ4ODg5ODkw*_ga*NzcyMjA1NzA1LjE3NDEwODcxMDg.*_ga_BFPVR2DEE2*czE3NDkwNjIzMDMkbzg2JGcxJHQxNzQ5MDgxNjA4JGo1OSRsMCRoMA.."
             alt="PodAcademy app interface showing students learning with audio"
             layout="fill"
-            objectFit="contain"
+            objectFit="cover"
             priority
             data-ai-hint="students podcasting"
           />
