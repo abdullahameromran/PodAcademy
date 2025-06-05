@@ -30,6 +30,7 @@ const HeroSection = () => {
             layout="fill"
             objectFit="cover"
             priority
+            data-ai-hint="students podcasting"
           />
         </div>
       </div>
